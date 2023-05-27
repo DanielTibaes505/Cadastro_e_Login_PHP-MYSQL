@@ -21,7 +21,7 @@
             <h1>User Registration</h1>
             <form action="../app/helpers/validate.php" method="POST">
                 <input type="text"  name="fullName" class="inputFormData" id="fullNameTxt" placeholder="Full Name*" maxlength="140">
-                <input type="email"  name="email" class="inputFormData" id="emailTxt" placeholder="E-mail*" maxlength="140">
+                <input type="email" required  name="email" class="inputFormData" id="emailTxt" placeholder="E-mail*" maxlength="140">
                 <input type="tel"  name="telNumber" class="inputFormData" id="telNumber" placeholder="Mobile Number*" maxlength="14">
                 <input type="text"  name="jobTitle" class="inputFormData" id="jobTitleTxt" placeholder="Job Title*" maxlength="140">
                 <input type="text"  name="country" class="inputFormData" id="countryTxt" placeholder="Country*" maxlength="140">
