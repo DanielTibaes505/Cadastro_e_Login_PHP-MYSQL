@@ -1,3 +1,4 @@
+
 <?php
     if(empty($_POST['fullName']) || strlen($_POST['fullName']) < 3) {
         $emptyFullName =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU NOME NO FORMULÁRIO</a>';  
@@ -8,7 +9,7 @@
     }elseif(empty($_POST['jobTitle'])) {
         $emptyEmail =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU TRABALHO NO FORMULÁRIO</a>';
     }elseif(empty($_POST['country'])) {
-        $emptyEmail =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU PAIS NO FORMULÁRIO</a>'; 
+        $emptyCountry =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU PAIS NO FORMULÁRIO</a>'; 
     }else{
         echo "Tudo certinho";
         die();
@@ -39,10 +40,7 @@
             echo $emptyJob;
         }elseif(isset($emptyCountry)){
             echo $emptyCountry;
-        }elseif(empty($emptyFullName) && empty($emptyTelNumber) && empty($emptyJob) && $emptyCountry){
-            
         }
-        
         ?>
     </section>
 </body>
