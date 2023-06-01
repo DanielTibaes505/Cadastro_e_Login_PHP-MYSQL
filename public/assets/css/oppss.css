@@ -38,7 +38,7 @@ body{
   width: 20.6rem;
   height: 20.6rem;
   animation-name: rotateAndBounce;
-  animation-duration: 1s;
+  animation-duration: 5s;
   animation-iteration-count: infinite;
 }
 .btnSubmit{
