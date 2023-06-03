@@ -12,15 +12,19 @@
 <body>
     <section class="boxLogin">
         <div class="titleLogin">
-            <img src="" alt="" srcset="">
             <h1>WELCOME!</h1>
             <h5>Login</h5>
         </div>
         <div class="boxForms">
-            <form action="" method="POST">
-                <input type="email" name="loginEmail" class="inptEmailLogin" required>
-            </form>
+            <form action="../../app/helpers/confirmLogin.php" method="POST">
+                <input type="email" name="loginemail" class="inptEmailLogin" placeholder="E-mail..." required>
+                <input type="password" name="loginpassword" class="inptPasswordLogin" placeholder="Password..." required>
+                <a href="#" class="resetPass">Forgot your password ?</a>
+                <div class="boxBtnLogin">
+                    <a href="../pages/registration.php">Register</a>
+                    <button type="submit">Enter</button>
+                </div>
         </div>
-    </section>
+    </section> 
 </body>
 </html>

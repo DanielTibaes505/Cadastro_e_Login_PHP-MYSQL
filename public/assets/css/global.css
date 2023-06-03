@@ -44,14 +44,11 @@
     --backgroundPageGreen: hsl(165, 78%, 45%);
     --backgroundBoxLeft: hsl(165, 78%, 45%);
     --white: hsl(0, 0%, 100%);
+    --whiteBackgroundBox:hsla(0, 0%, 100%, 0.87);
     --whitePageBack: hsl(0, 0%, 100%);
     --black: hsl(0, 0%, 0%);
     --btnBackground: hsl(165, 78%, 45%);
 
     font-size: 62.5%;
 
-}
-body{
-    width: 100%;
-    height: 100%;
 }
