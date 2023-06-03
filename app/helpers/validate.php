@@ -4,23 +4,18 @@
     $image = '<img src="../../public/assets/images/triangle.png" alt="" class="imgBackValidate">';
     $name = strtoupper($_POST['fullName']);
     $email = strtoupper($_POST['email']);
-    $tel = strtoupper($_POST['telNumber']);
-    $job = strtoupper($_POST['jobTitle']);
     $country = strtoupper($_POST['country']);
+    $pass = $_POST['pass'];
     $term = $_POST['checkboxTerm'];
 
     if(empty($name) || strlen($name) < 3) {
-        $emptyEmail =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU NOME NO FORMULÁRIO</a>';
+        $emptyEmail =  '<a href = "../../public/pages/registration.php" class="btnSubmit">CORRIJA SEU NOME NO FORMULÁRIO</a>';
     }elseif(empty($email)  || !filter_var($email, FILTER_VALIDATE_EMAIL)) {
-        $emptyEmail =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU E-MAIL NO FORMULÁRIO</a>';
-    }elseif(empty($tel)) {
-        $emptyTelNumber =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU TELEFONE NO FORMULÁRIO</a>'; 
-    }elseif(empty($job)) {
-        $emptyEmail =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU TRABALHO NO FORMULÁRIO</a>';
+        $emptyEmail =  '<a href = "../../public/pages/registration.php" class="btnSubmit">CORRIJA SEU E-MAIL NO FORMULÁRIO</a>';
     }elseif(empty($country)) {
-        $emptyCountry =  '<a href = "../../public/index.php" class="btnSubmit">CORRIJA SEU PAIS NO FORMULÁRIO</a>'; 
+        $emptyCountry =  '<a href = "../../public/pages/registration.php" class="btnSubmit">CORRIJA SEU PAIS NO FORMULÁRIO</a>'; 
     }elseif(empty($term)){
-        $emptyTerm =  '<a href = "../../public/index.php" class="btnSubmit">ACEITE OS TERMOS DE CADASTRO</a>';
+        $emptyTerm =  '<a href = "../../public/pages/registration.php" class="btnSubmit">ACEITE OS TERMOS DE CADASTRO</a>';
     }else{
         if( $_SERVER['REQUEST_METHOD']=='POST' )
         {
@@ -28,13 +23,13 @@
 
             if( isset( $_SESSION['last_request'] ) && $_SESSION['last_request']== $request )
             {
-            die();
+                die();
             }
             else
             {   
-            $_SESSION['last_request']  = $request;
-            $terms = true;
-            include('./sendingController.php');
+                $_SESSION['last_request']  = $request;
+                $terms = true;
+                include('./sendingController.php');
             }
         }
 
@@ -60,12 +55,6 @@
         }elseif(isset($emptyEmail)){
             echo $image;
             echo $emptyEmail;
-        }elseif(isset($emptyTelNumber)){
-            echo $image;
-            echo $emptyTelNumber;
-        }elseif(isset($emptyJob)){
-            echo $image;
-            echo $emptyJob;
         }elseif(isset($emptyCountry)){
             echo $image;
             echo $emptyCountry;

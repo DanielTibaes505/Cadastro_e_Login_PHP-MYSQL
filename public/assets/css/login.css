@@ -1,0 +1,9 @@
+body{
+    background-color: var(--backgroundPageGreen);
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+
+    font-family: RobotoBold;
+    color: var(--white);
+}
